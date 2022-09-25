@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   devise_for :parents
-  root to: 'home#index'
+  root to: 'pages#home'
+  resources :parents, only: [:show]
 end
